@@ -40,10 +40,17 @@ export const PostJobTab: React.FC<PostJobTabProps> = ({
   const [isPosting, setIsPosting] = useState(false);
   const [postedSuccess, setPostedSuccess] = useState(false);
 
+  const [formError, setFormError] = useState<string | null>(null);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!jobTitle.trim() || !companyName.trim()) return;
 
+    if (!jobTitle.trim() || !companyName.trim() || !salaryText.trim()) {
+      setFormError('Please fill in all required fields (Job Title, Company Name, and Salary).');
+      return;
+    }
+
+    setFormError(null);
     setIsPosting(true);
     setTimeout(() => {
       const newJob: Job = {
@@ -278,6 +285,12 @@ export const PostJobTab: React.FC<PostJobTabProps> = ({
               className="w-full p-3 rounded-xl bg-[#f2f3ff] text-xs font-semibold text-[#131b2e] border border-[#c7c4d8]/40 focus:outline-none focus:border-[#3525cd] resize-none"
             />
           </div>
+
+          {formError && (
+            <div className="p-3 bg-red-50 text-red-700 rounded-xl border border-red-200 text-xs font-bold flex items-center gap-2">
+              <span>{formError}</span>
+            </div>
+          )}
 
           {postedSuccess && (
             <div className="p-3 bg-[#86f2e4]/30 rounded-xl border border-[#006a61] text-[#006a61] text-xs font-bold flex items-center gap-2">

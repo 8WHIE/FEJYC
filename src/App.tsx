@@ -194,6 +194,21 @@ export default function App() {
 
         {activeTab === 'about' && <AboutTab />}
 
+        {/* Professional Footer */}
+        <footer className="w-full bg-[#131b2e] text-white py-8 px-6 mt-12 mb-20">
+          <div className="flex flex-col items-center justify-center text-center space-y-3">
+            <h3 className="font-extrabold text-lg tracking-tight">FEJYC</h3>
+            <p className="text-[#c7c4d8] text-xs max-w-xs leading-relaxed">
+              Bharat's Rapid Hiring Network
+            </p>
+            <div className="w-12 h-px bg-white/20 my-2"></div>
+            <div className="flex flex-col gap-1 text-[11px] font-semibold text-[#a5a3b7]">
+              <span>Created by <span className="text-white">8WHIE</span></span>
+              <span>Owner: <span className="text-white">Aryan Thakur</span></span>
+            </div>
+          </div>
+        </footer>
+
         {/* Fixed Bottom Navigation */}
         <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
       </main>

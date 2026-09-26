@@ -128,7 +128,18 @@ export const JobSeekerTab: React.FC<JobSeekerTabProps> = ({
     }
   };
 
+  const [formError, setFormError] = useState<string | null>(null);
+
   const handleSaveAction = () => {
+    if (preferences.interestedFields.length === 0) {
+      setFormError('Please select at least one interested field.');
+      return;
+    }
+    if (preferences.targetLocations.length === 0) {
+      setFormError('Please add at least one target location.');
+      return;
+    }
+    setFormError(null);
     setSaveSuccessMessage(true);
     setTimeout(() => {
       setSaveSuccessMessage(false);
@@ -766,7 +777,12 @@ export const JobSeekerTab: React.FC<JobSeekerTabProps> = ({
             )}
           </div>
 
-          {/* Success Banner */}
+          {/* Success / Error Banners */}
+          {formError && (
+            <div className="p-3 bg-red-50 text-red-700 rounded-xl border border-red-200 text-xs font-bold text-center">
+              {formError}
+            </div>
+          )}
           {saveSuccessMessage && (
             <div className="p-3 rounded-xl bg-[#86f2e4]/30 border border-[#006a61] text-[#006a61] text-xs font-bold text-center animate-bounce">
               ✓ Preferences saved! Redirecting to matching jobs...
