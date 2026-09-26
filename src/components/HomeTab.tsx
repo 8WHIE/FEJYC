@@ -20,7 +20,8 @@ import {
   ArrowRight,
   ShieldCheck,
   User,
-  Users
+  Users,
+  MapPin
 } from 'lucide-react';
 import { Job, TabType } from '../types';
 import { FounderAvatar } from './FounderAvatars';
@@ -95,11 +96,11 @@ export const HomeTab: React.FC<HomeTabProps> = ({
       {/* 2. Hero Headline & Subtitle */}
       <div className="space-y-2">
         <h1 className="text-[28px] sm:text-[32px] font-extrabold text-[#131b2e] leading-[1.18] tracking-tight">
-          Find Your Dream Career or{' '}
-          <span className="text-[#3525cd]">Hire Verified Talent</span> in Minutes
+          Find Jobs. Find Talent.{' '}
+          <span className="text-[#3525cd]">Hire Faster.</span>
         </h1>
         <p className="text-sm text-[#464555] leading-relaxed">
-          Connecting ambitious talent across Tier 1, Tier 2, and Tier 3 cities with verified high-growth companies.
+          Connecting ambitious talent with verified high-growth companies.
         </p>
       </div>
 
@@ -229,7 +230,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-semibold flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#86f2e4] animate-pulse" />
-              50,000+ Active Roles
+              Fast Hiring
             </span>
             <div className="w-8 h-8 rounded-xl bg-white/15 flex items-center justify-center">
               <TrendingUp className="w-4 h-4 text-white" />
@@ -292,7 +293,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
               <span>📢</span>
             </button>
             <span className="text-[11px] font-bold text-[#006a61] tracking-tight">
-              12k+ Recruited
+              Verified Employers
             </span>
           </div>
         </div>
@@ -476,28 +477,22 @@ export const HomeTab: React.FC<HomeTabProps> = ({
 
       {/* 7. Key Trust Metrics Strip */}
       <div className="bg-white rounded-2xl p-4 border border-[#c7c4d8]/40 shadow-xs grid grid-cols-3 divide-x divide-[#dae2fd] text-center">
-        <div>
-          <div className="text-lg font-extrabold text-[#3525cd] tabular-nums">
-            98.4%
-          </div>
+        <div className="flex flex-col items-center justify-center">
+          <ShieldCheck className="w-6 h-6 text-[#3525cd] mb-1" />
           <div className="text-[11px] text-[#464555] font-semibold mt-0.5">
-            Verified Hiring
+            Verified Employers
           </div>
         </div>
-        <div>
-          <div className="text-lg font-extrabold text-[#006a61] tabular-nums">
-            &lt; 24 Hrs
-          </div>
+        <div className="flex flex-col items-center justify-center">
+          <Zap className="w-6 h-6 text-[#006a61] mb-1" />
           <div className="text-[11px] text-[#464555] font-semibold mt-0.5">
-            First Callback
+            Fast Hiring
           </div>
         </div>
-        <div>
-          <div className="text-lg font-extrabold text-[#131b2e] tabular-nums">
-            35k+
-          </div>
+        <div className="flex flex-col items-center justify-center">
+          <MapPin className="w-6 h-6 text-[#131b2e] mb-1" />
           <div className="text-[11px] text-[#464555] font-semibold mt-0.5">
-            Placed in BR
+            Local Opportunities
           </div>
         </div>
       </div>

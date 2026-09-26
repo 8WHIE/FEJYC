@@ -65,26 +65,26 @@ export const AboutTab: React.FC = () => {
 
         <div>
           <h1 className="text-2xl sm:text-[26px] font-extrabold text-white leading-tight tracking-tight">
-            Connecting Bharat's Talent with Boundless Opportunities.
+            FEJYC is a hiring platform concept focused on making job discovery and recruitment simpler and faster.
           </h1>
           <p className="text-xs text-[#dad7ff] mt-2 leading-relaxed">
-            Empowering ambitious job seekers and forward-thinking recruiters across Muzaffarpur, Bihar, and all 28 states of India with hyper-local access and verified career progression.
+            Empowering ambitious job seekers and forward-thinking recruiters across India with hyper-local access and verified career progression.
           </p>
         </div>
 
         {/* 3 Metric Columns */}
         <div className="pt-2 border-t border-white/15 grid grid-cols-3 text-center divide-x divide-white/15">
           <div>
-            <div className="text-xl font-extrabold text-white tabular-nums">28</div>
-            <div className="text-[10px] text-[#dad7ff] font-medium mt-0.5">States Covered</div>
+            <div className="text-xl font-extrabold text-white tabular-nums">Fast</div>
+            <div className="text-[10px] text-[#dad7ff] font-medium mt-0.5">Hiring</div>
           </div>
           <div>
-            <div className="text-xl font-extrabold text-[#86f2e4] tabular-nums">842001</div>
-            <div className="text-[10px] text-[#dad7ff] font-medium mt-0.5">HQ Pin Code</div>
+            <div className="text-xl font-extrabold text-[#86f2e4] tabular-nums">Easy</div>
+            <div className="text-[10px] text-[#dad7ff] font-medium mt-0.5">Job Discovery</div>
           </div>
           <div>
             <div className="text-xl font-extrabold text-white tabular-nums">100%</div>
-            <div className="text-[10px] text-[#dad7ff] font-medium mt-0.5">Verified Hub</div>
+            <div className="text-[10px] text-[#dad7ff] font-medium mt-0.5">Verified</div>
           </div>
         </div>
       </div>
@@ -448,7 +448,10 @@ export const AboutTab: React.FC = () => {
           Proudly Crafted for Indian Careers
         </div>
         <p className="text-xs font-semibold text-[#464555]">
-          FEJYC Career Platform • Founded by Aryan Thakur & Satyam Mishra
+          FEJYC Career Platform • Created by 8WHIE
+        </p>
+        <p className="text-xs font-semibold text-[#464555]">
+          Owner: Aryan Thakur
         </p>
       </div>
     </div>
