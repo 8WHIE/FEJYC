@@ -1,0 +1,6 @@
+{
+  "name": "FEJYC - Bharat's Rapid Hiring Network",
+  "description": "Connecting ambitious talent across Tier 1, Tier 2, and Tier 3 cities with verified high-growth companies in Bihar and pan-India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
